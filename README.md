@@ -8,9 +8,11 @@
 | Daud Dhiya' Rozaan                 | 5025211021 |
 
 ## No 1
+
 User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
-- Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
-- Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+
+- Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut?
+- Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut?
 - Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 - Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
 
@@ -20,7 +22,8 @@ Untuk mencari packet yang memiliki fungsi mengunggah file, kita dapat melakukan 
 
 Lalu pencet packet tersebut dan buka bagian `Transmission Control Protocol`. Disana akan terlihat berapa sequence number (raw) dan acknowledge number (raw) dari packet tersebut.
 
-`Foto SS`
+`SS Hasil`
+![Alt text](images/image.png)
 
 - **Jawaban nomor 1a : 258040667**
 - **Jawaban nomor 1b : 1044861039**
@@ -29,21 +32,71 @@ Untuk mencari packet yang menerima respon dari packet yang telah mengunggah file
 
 Sama seperti sebelumnya, tinggal pencet packet tersebut dan buka bagian `Transmission Control Protocol`. Disana akan terlihat berapa sequence number (raw) dan acknowledge number (raw) dari packet tersebut.
 
-`Foto SS`
+`SS Hasil`
+![Alt text](images/image-1.png)
 
 - **Jawaban nomor 1c : 1044861039**
 - **Jawaban nomor 1d : 258040696**
 
-`Foto SS Flag`?
+`SS Flag`
+![Alt text](images/image-2.png)
 
 ## No 2
 
+Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+
+**Jawab**
+
+Buka portal praktikum jarkom di chrome, lalu gunakan extension `wappalyzer` dari chrome.
+
+`SS Hasil`
+![Alt text](images/image-3.png)
+
+**Jawaban nomor 2 : gunicorn**
+
+`SS Flag`
+![Alt text](images/image-4.png)
+
 ## No 3
+
+Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+
+- Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+- Protokol layer transport apa yang digunakan?
+
+**Jawab**
+
+Gunakan filter: `udp.port == 3702 && (ip.dst ==  239.255.255.250 || ip.src ==  239.255.255.250)`, lalu hitung manual. Disitu juga akan nampak protocol apa yang digunakan.
+
+`SS Hasil`
+![Alt text](images/image-5.png)
+
+- **Jawaban nomor 3a : 21**
+- **Jawaban nomor 3b : UDP**
+
+`SS Flag`
+![Alt text](images/image-6.png)
 
 ## No 4
 
+Berapa nilai checksum yang didapat dari header pada paket nomor 130?
+
+**Jawab**
+
+klik 2x pada paket no 130, lalu buka bagian `User Diagram Protocol`, lalu lihat bagian `Checksum`
+
+`SS Hasil`
+![Alt text](images/image-7.png)
+
+**Jawaban nomor 4 : 0x18e5**
+
+`SS Flag`
+![Alt text](images/image-8.png)
+
 ## No 5
+
 Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+
 - Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
 - Port berapakah pada server yang digunakan untuk service SMTP?
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
@@ -53,40 +106,100 @@ Pertama-tama, karena pada nomor 5 ini kami dikasih 2 file yaitu file soal5.pcap 
 
 Karena pada nomor 5 topiknya adalah `SMTP`, maka kami berusaha untuk mencari packet yang relevan dengan `MAIL`. Ditemukan satu packet dengan isi info `MAIL`, lalu klik kanan pada packet tersebut dan klik `follow TCP Stream`.
 
-`Foto SS`
+`SS Hasil`
+![Alt text](images/image-9.png)
 
-Di dalam file tersebut, ditemukan password untuk membuka file .zip-nya yaitu `NWltcGxlUGFzNXdvcmQ=` namun harus di decode menggunakan `Base64` terlebih dahulu.
+![Alt text](images/image-10.png)
 
-`Foto SS`
+Di dalam file tersebut, ditemukan password untuk membuka file .zip-nya yaitu `NWltcGxlUGFzNXdvcmQ=` namun harus di decode menggunakan `Base64` terlebih dahulu. Lalu, kami melakukan decode di web `base64decode.org` dan menemukan password asli dari file .zip-nya yaitu `5implePas5word`.
 
-Lalu, kami melakukan decode di web `base64decode.org` dan menemukan password asli dari file .zip-nya yaitu `5implePas5word`.
-
-`Foto SS`
+`SS Hasil`
+![Alt text](images/image-11.png)
 
 Lalu, tinggal extract file .zip tersebut dan kami mendapatkan file .txt yang isinya terdapat `nc` untuk menjawab pertanyaan.
 
-`Foto SS`
+`SS Hasil`
+
+![Alt text](images/image-12.png)
 
 Untuk menjawab nomor 5a, tinggal buka file `soal5.pcap`, lalu scroll kebawah dan lihat nomor packet terakhir.
 
-`Jawaban 5a : 60`
+**Jawaban nomor 5a : 60**
 
-Untuk menjawab nomor 6b, tinggal menggunakan filter `smtp`, lalu klik pada salah satu packet agar dapat mengetahui port dari `smtp`. 
+Untuk menjawab nomor 5b, tinggal menggunakan filter `smtp`, lalu klik pada salah satu packet agar dapat mengetahui port dari `smtp`.
 
-`Jawaban 5b : 25`
+`SS Hasil`
+![Alt text](images/image-13.png)
+
+**Jawaban nomor 5b : 25**
 
 Untuk menjawab nomor 6c, kami mencari ip yang infonya berhubungan dengan komunikasi secara global, salah satunya adalah komunikasi email. Dan ditemukan antara `10.10.1.4` atau `74.53.140.154`. Karena kami menganggap bahwa ip dengan awalan `10` adalah ip dari ITS, maka kami menjawab ip dengan awalan `74`.
 
-`Jawaban 5c : 74.53.140.154`
+**Jawaban nomor 5c : 74.53.140.154**
 
-`Foto SS Flag`?
+`Foto SS Flag`
+![Alt text](images/image-14.png)
 
 ## No 6
 
 ## No 7
 
+Berapa jumlah packet yang menuju IP 184.87.193.88?
+
+**Jawab**
+
+Gunakan filter: `ip.dst == 184.87.193.88` yang artinya memfilter ip yang berdestinasi 184.87.193.88. Lalu hitung banyak paket yg muncul.
+
+`SS Hasil`
+![Alt text](images/image-15.png)
+
+**Jawaban nomor 7 : 6**
+
+`SS Flag`
+![Alt text](images/image-16.png)
+
 ## No 8
+
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+
+**Jawab**
+
+Untuk kueri filter menuju port tertentu, maka gunakan `tcp.dstport == ... || udp.dstport == ...`.
+
+**Jawaban nomor 7 : tcp.dstport == 80 || udp.dstport == 80**
+
+`SS Flag`
+![Alt text](images/image-17.png)
 
 ## No 9
 
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+
+**Jawab**
+
+Translate soal tersebut menjadi persamaan logika di pemrograman.
+
+Untuk memfilter paket yg berasal dari suatu alamat, gunakan `ip.src == ...`. Sedangkan untuk memfilter paket yg tidak menuju ke suatu alamat, gunakan `ip.dst != ...`.
+
+**Jawaban nomor 7 : ip.src == 10.51.40.1 && ip.dst != 10.39.55.34**
+
+`SS Flag`
+![Alt text](images/image-18.png)
+
 ## No 10
+
+Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet
+
+**Jawab**
+
+Gunakan filter: `telnet.cmd`, lalu klik kanan salah satu paket untuk follow tcp stream, lalu terdapat kredensial user(dhafin) & password (kesayangannyak0k0)
+
+`SS Hasil`
+![Alt text](images/image-19.png)
+
+![Alt text](images/image-20.png)
+
+**Jawaban nomor 7 : 6**
+
+`SS Flag`
+![Alt text](images/image-21.png)
