@@ -166,7 +166,7 @@ Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yan
 
 Untuk kueri filter menuju port tertentu, maka gunakan `tcp.dstport == ... || udp.dstport == ...`.
 
-**Jawaban nomor 7 : tcp.dstport == 80 || udp.dstport == 80**
+**Jawaban nomor 8 : tcp.dstport == 80 || udp.dstport == 80**
 
 `SS Flag`
 ![Alt text](images/image-17.png)
@@ -181,7 +181,7 @@ Translate soal tersebut menjadi persamaan logika di pemrograman.
 
 Untuk memfilter paket yg berasal dari suatu alamat, gunakan `ip.src == ...`. Sedangkan untuk memfilter paket yg tidak menuju ke suatu alamat, gunakan `ip.dst != ...`.
 
-**Jawaban nomor 7 : ip.src == 10.51.40.1 && ip.dst != 10.39.55.34**
+**Jawaban nomor 9 : ip.src == 10.51.40.1 && ip.dst != 10.39.55.34**
 
 `SS Flag`
 ![Alt text](images/image-18.png)
@@ -199,7 +199,7 @@ Gunakan filter: `telnet.cmd`, lalu klik kanan salah satu paket untuk follow tcp 
 
 ![Alt text](images/image-20.png)
 
-**Jawaban nomor 7 : 6**
+**Jawaban nomor 10 : dhafin:kesayangannyak0k0**
 
 `SS Flag`
 ![Alt text](images/image-21.png)
