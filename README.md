@@ -102,6 +102,7 @@ Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk men
 - Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
 
 **Jawab**
+
 Pertama-tama, karena pada nomor 5 ini kami dikasih 2 file yaitu file soal5.pcap dan file zippppfileee.zip, dan kami harus mencari password untuk membuka file .zip tersebut terlebih dahulu agar kita mendapatkan `nc` agar bisa menjawab pertanyaan.
 
 Karena pada nomor 5 topiknya adalah `SMTP`, maka kami berusaha untuk mencari packet yang relevan dengan `MAIL`. Ditemukan satu packet dengan isi info `MAIL`, lalu klik kanan pada packet tersebut dan klik `follow TCP Stream`.
@@ -141,6 +142,28 @@ Untuk menjawab nomor 6c, kami mencari ip yang infonya berhubungan dengan komunik
 ![Alt text](images/image-14.png)
 
 ## No 6
+
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+- Clue 1: Sepertinya ada yang salah dengan penulisan tersebut secara KBBI. Ada sesuatu yang Besar di depan mata.
+- Clue 2: Jenis cipher merupakan substitusi a1z26 Cipher
+- Clue 3: Rentang Huruf yang digunakan Huruf A-R, 1-18 dengan Jawaban 6 Huruf.
+- Clue 4: SOURCE ADDRESS ADALAH KUNCI SEMUANYA.
+
+**Jawab :**
+
+Dari clue yang kita dapat, kita hanya perlu untuk membuka file .pcap nya dan mencari packet dengan nomor 7812 lalu melihat IP nya karena dalam soal disebutkan `SOURCE ADDRESS 7812`. 
+
+`SS FOTO`
+
+Dari clue berikutnya, kita hanya perlu memasukkan IP packet tersebut ke `a1z26 Chipper` atau kita bisa menghitungnya secara manual, dan didapatkan jawabannya.
+
+`SS FOTO`
+
+Karena pada clue terakhir, semua hurufnya besar, maka kita memasukkan jawaban dengan huruf besar.
+
+`JAWABAN : JDRNJA`
+
+`SS FOTO`
 
 ## No 7
 
