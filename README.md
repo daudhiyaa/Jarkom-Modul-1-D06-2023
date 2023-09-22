@@ -153,17 +153,20 @@ Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggema
 
 Dari clue yang kita dapat, kita hanya perlu untuk membuka file .pcap nya dan mencari packet dengan nomor 7812 lalu melihat IP nya karena dalam soal disebutkan `SOURCE ADDRESS 7812`. 
 
-`SS FOTO`
+`SS HASIL
+![Alt text](images/image-22.png)
 
 Dari clue berikutnya, kita hanya perlu memasukkan IP packet tersebut ke `a1z26 Chipper` atau kita bisa menghitungnya secara manual, dan didapatkan jawabannya.
 
 `SS FOTO`
+![Alt text](images/image-23.png)
 
 Karena pada clue terakhir, semua hurufnya besar, maka kita memasukkan jawaban dengan huruf besar.
 
 `JAWABAN : JDRNJA`
 
 `SS FOTO`
+![Alt text](images/image-24.png)
 
 ## No 7
 
